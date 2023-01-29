@@ -37,6 +37,7 @@ class YouTubeDownloader(QWidget):
         stream = yt.streams.first()
         save_path = QFileDialog.getSaveFileName(self, "Save Video", "", "All Files (*);;MP4 Files (*.mp4)")
         stream.download(save_path[0])
+        sys.exit()
 
 app = QApplication(sys.argv)
 youtube_downloader = YouTubeDownloader()
